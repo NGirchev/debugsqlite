@@ -1,0 +1,188 @@
+> library(rJava)
+> .jinit(parameters="-DrJava.debug=true")
+RJavaClassLoader("/usr/local/lib/R/site-library/rJava", "/usr/local/lib/R/site-library/rJava/libs", no parent)
+ - primary loader
+ - registered JRI: /usr/local/lib/R/site-library/rJava/jri/libjri.so
+RJavaClassLoader initialized.
+
+Registered libraries:
+  jri: '/usr/local/lib/R/site-library/rJava/jri/libjri.so'
+  rJava: '/usr/local/lib/R/site-library/rJava/libs/rJava.so'
+
+Registered class paths:
+  '/usr/local/lib/R/site-library/rJava/java'
+
+-- end of class loader report --
+RJavaClassLoader@4b1210ee.findClass(RJavaTools)
+ - URL loader did not find it: java.lang.ClassNotFoundException: RJavaTools
+RJavaClassLoader.findClass("RJavaTools")
+ - trying class path "/usr/local/lib/R/site-library/rJava/java"
+   Directory, can get '/usr/local/lib/R/site-library/rJava/java/RJavaTools.class'? YES
+  loading class file, initial n = 10023
+  next n = -1 (rp=10023, al=131072)
+RJavaClassLoader: loaded class RJavaTools, 10023 bytes
+  defineClass('RJavaTools') returned class RJavaTools
+RJavaClassLoader@4b1210ee.findClass(RJavaImport)
+ - URL loader did not find it: java.lang.ClassNotFoundException: RJavaImport
+RJavaClassLoader.findClass("RJavaImport")
+ - trying class path "/usr/local/lib/R/site-library/rJava/java"
+   Directory, can get '/usr/local/lib/R/site-library/rJava/java/RJavaImport.class'? YES
+  loading class file, initial n = 3444
+  next n = -1 (rp=3444, al=131072)
+RJavaClassLoader: loaded class RJavaImport, 3444 bytes
+  defineClass('RJavaImport') returned class RJavaImport
+> .jaddClassPath('debugsqlite-1.5-SNAPSHOT-jar-with-dependencies.jar')
+RJavaClassLoader: added 'debugsqlite-1.5-SNAPSHOT-jar-with-dependencies.jar' to the URL class path loader
+RJavaClassLoader: adding Java archive file 'debugsqlite-1.5-SNAPSHOT-jar-with-dependencies.jar' to the internal class path
+> DebugSqlite <- .jnew(class = "com/aliyun/odps/DebugSqlite")
+RJavaClassLoader@4b1210ee.findClass(com.aliyun.odps.DebugSqlite)
+RJavaClassLoader: found class com.aliyun.odps.DebugSqlite using URL loader
+> DebugSqlite$testOne()
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.JDBC)
+RJavaClassLoader: found class org.sqlite.JDBC using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConnection)
+RJavaClassLoader: found class org.sqlite.SQLiteConnection using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.jdbc4.JDBC4Connection)
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.jdbc3.JDBC3Connection)
+RJavaClassLoader: found class org.sqlite.jdbc3.JDBC3Connection using URL loader
+RJavaClassLoader: found class org.sqlite.jdbc4.JDBC4Connection using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.LoggerFactory)
+RJavaClassLoader: found class org.slf4j.LoggerFactory using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.event.LoggingEvent)
+RJavaClassLoader: found class org.slf4j.event.LoggingEvent using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.ILoggerFactory)
+RJavaClassLoader: found class org.slf4j.ILoggerFactory using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.helpers.SubstituteLoggerFactory)
+RJavaClassLoader: found class org.slf4j.helpers.SubstituteLoggerFactory using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.Logger)
+RJavaClassLoader: found class org.slf4j.Logger using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.helpers.NOPLoggerFactory)
+RJavaClassLoader: found class org.slf4j.helpers.NOPLoggerFactory using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.helpers.Util)
+RJavaClassLoader: found class org.slf4j.helpers.Util using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.impl.StaticLoggerBinder)
+ - URL loader did not find it: java.lang.ClassNotFoundException: org.slf4j.impl.StaticLoggerBinder
+RJavaClassLoader.findClass("org.slf4j.impl.StaticLoggerBinder")
+ - trying class path "/usr/local/lib/R/site-library/rJava/java"
+   Directory, can get '/usr/local/lib/R/site-library/rJava/java/org/slf4j/impl/StaticLoggerBinder.class'? NO
+ - trying class path "debugsqlite-1.5-SNAPSHOT-jar-with-dependencies.jar"
+   JAR file, can get 'org/slf4j/impl/StaticLoggerBinder'? NO
+    >> ClassNotFoundException
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.helpers.NOPLogger)
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.helpers.MarkerIgnoringBase)
+RJavaClassLoader@4b1210ee.findClass(org.slf4j.helpers.NamedLoggerBase)
+RJavaClassLoader: found class org.slf4j.helpers.NamedLoggerBase using URL loader
+RJavaClassLoader: found class org.slf4j.helpers.MarkerIgnoringBase using URL loader
+RJavaClassLoader: found class org.slf4j.helpers.NOPLogger using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$Pragma)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$Pragma using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$PragmaValue)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$PragmaValue using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$Encoding)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$Encoding using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$JournalMode)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$JournalMode using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$LockingMode)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$LockingMode using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$SynchronousMode)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$SynchronousMode using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$TempStore)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$TempStore using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$TransactionMode)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$TransactionMode using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$DatePrecision)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$DatePrecision using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$DateClass)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$DateClass using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConfig$HexKeyMode)
+RJavaClassLoader: found class org.sqlite.SQLiteConfig$HexKeyMode using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteOpenMode)
+RJavaClassLoader: found class org.sqlite.SQLiteOpenMode using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteConnectionConfig)
+RJavaClassLoader: found class org.sqlite.SQLiteConnectionConfig using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateFormat)
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.DateParser)
+RJavaClassLoader: found class org.sqlite.date.DateParser using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.DatePrinter)
+RJavaClassLoader: found class org.sqlite.date.DatePrinter using URL loader
+RJavaClassLoader: found class org.sqlite.date.FastDateFormat using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FormatCache)
+RJavaClassLoader: found class org.sqlite.date.FormatCache using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateFormat$1)
+RJavaClassLoader: found class org.sqlite.date.FastDateFormat$1 using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FormatCache$MultipartKey)
+RJavaClassLoader: found class org.sqlite.date.FormatCache$MultipartKey using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDatePrinter)
+RJavaClassLoader: found class org.sqlite.date.FastDatePrinter using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDatePrinter$Rule)
+RJavaClassLoader: found class org.sqlite.date.FastDatePrinter$Rule using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDatePrinter$NumberRule)
+RJavaClassLoader: found class org.sqlite.date.FastDatePrinter$NumberRule using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDatePrinter$PaddedNumberField)
+RJavaClassLoader: found class org.sqlite.date.FastDatePrinter$PaddedNumberField using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDatePrinter$CharacterLiteral)
+RJavaClassLoader: found class org.sqlite.date.FastDatePrinter$CharacterLiteral using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDatePrinter$TwoDigitMonthField)
+RJavaClassLoader: found class org.sqlite.date.FastDatePrinter$TwoDigitMonthField using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDatePrinter$TwoDigitNumberField)
+RJavaClassLoader: found class org.sqlite.date.FastDatePrinter$TwoDigitNumberField using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$Strategy)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$Strategy using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$1)
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$NumberStrategy)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$NumberStrategy using URL loader
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$1 using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$2)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$2 using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$3)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$3 using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$4)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$4 using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$ISO8601TimeZoneStrategy)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$ISO8601TimeZoneStrategy using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$CopyQuotedStrategy)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$CopyQuotedStrategy using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$TimeZoneStrategy)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$TimeZoneStrategy using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.date.FastDateParser$CaseInsensitiveTextStrategy)
+RJavaClassLoader: found class org.sqlite.date.FastDateParser$CaseInsensitiveTextStrategy using URL loader
+{open_mode=70, transaction_mode=DEFERRED, date_precision=MILLISECONDS, busy_timeout=3000, date_string_format=yyyy-MM-dd HH:mm:ss.SSS, jdbc.explicit_readonly=false, date_class=INTEGER, shared_cache=false}
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.core.DB)
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.core.Codes)
+RJavaClassLoader: found class org.sqlite.core.Codes using URL loader
+RJavaClassLoader: found class org.sqlite.core.DB using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.core.NativeDB)
+RJavaClassLoader: found class org.sqlite.core.NativeDB using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.core.CoreDatabaseMetaData)
+RJavaClassLoader: found class org.sqlite.core.CoreDatabaseMetaData using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.jdbc4.JDBC4DatabaseMetaData)
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.jdbc3.JDBC3DatabaseMetaData)
+RJavaClassLoader: found class org.sqlite.jdbc3.JDBC3DatabaseMetaData using URL loader
+RJavaClassLoader: found class org.sqlite.jdbc4.JDBC4DatabaseMetaData using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteException)
+RJavaClassLoader: found class org.sqlite.SQLiteException using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteJDBCLoader)
+RJavaClassLoader: found class org.sqlite.SQLiteJDBCLoader using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.FileException)
+RJavaClassLoader: found class org.sqlite.FileException using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.NativeLibraryNotFoundException)
+RJavaClassLoader: found class org.sqlite.NativeLibraryNotFoundException using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.SQLiteJDBCLoader$VersionHolder)
+RJavaClassLoader: found class org.sqlite.SQLiteJDBCLoader$VersionHolder using URL loader
+RJavaClassLoader: findResource('META-INF/maven/org.xerial/sqlite-jdbc/pom.properties')
+RJavaClassLoader: found resource in jar:file:/home/rstudio/debugsqlite-1.5-SNAPSHOT-jar-with-dependencies.jar!/META-INF/maven/org.xerial/sqlite-jdbc/pom.properties using URL loader.
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.util.LibraryLoaderUtil)
+RJavaClassLoader: found class org.sqlite.util.LibraryLoaderUtil using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.util.OSInfo)
+RJavaClassLoader: found class org.sqlite.util.OSInfo using URL loader
+RJavaClassLoader@4b1210ee.findClass(org.sqlite.util.ProcessRunner)
+RJavaClassLoader: found class org.sqlite.util.ProcessRunner using URL loader
+
+Exception: java.lang.StackOverflowError thrown from the UncaughtExceptionHandler in thread "process reaper"

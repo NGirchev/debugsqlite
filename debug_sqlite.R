@@ -1,5 +1,5 @@
 library(rJava)
-.jinit()
-.jaddClassPath('target/debugsqlite-1.0-SNAPSHOT-jar-with-dependencies.jar')
+.jinit(parameters="-DrJava.debug=true")
+.jaddClassPath('target/debugsqlite-1.1-SNAPSHOT-jar-with-dependencies.jar')
 DebugSqlite <- .jnew(class = "com/aliyun/odps/DebugSqlite")
-DebugSqlite$TestOne()
+DebugSqlite$testOne()
