@@ -1,4 +1,6 @@
 # Bug description
+link to sqlite-jdbc opened issue https://github.com/xerial/sqlite-jdbc/issues/1042
+
 When I run my java code with sqlite inside RStudio, using R console(rjava), I see 
 `Exception: java.lang.StackOverflowError thrown from the UncaughtExceptionHandler in thread "process reaper"`
 
